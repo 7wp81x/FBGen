@@ -1,10 +1,9 @@
 # FBGen
 FBGen is simple facebook user based wordlist generator.
 
-## Screenshots
+## Screenshot
 <img src="https://github.com/Mrp1r4t3/FBGen/blob/main/Screenshot/Screenshot0.jpg" width="80%" height="80%">
 
-H
 ## Termux Installation
 1. `pkg install git -y`
 2. `pkg install python -y`
