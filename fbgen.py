@@ -168,28 +168,28 @@ def updates():
 def username():
     with open("cookie.txt", "r") as token:
         cok = token.read()
-        headers = {
-            'authority': 'mbasic.facebook.com',
-            'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Android"',
-            'upgrade-insecure-requests': '1',
-            'user-agent': user_agents,
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'sec-fetch-site': 'none',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-user': '?1',
-            'sec-fetch-dest': 'document',
-            'accept-language': 'en-US,en;q=0.9',
-            'cookie': cok,
-        }
+    headers = {
+        'authority': 'mbasic.facebook.com',
+        'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Android"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': user_agents,
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-language': 'en-US,en;q=0.9',
+        'cookie': cok,
+    }
     user = input("\033[1;92m[\033[1;97m?\033[1;92m] Enter Target Username\033[1;91m: \033[0m")
     if user in ["", " "]:
         print("\033[1;91m[\033[1;97m!\033[1;91m] Please enter a valid username!\033[0m")
     else:
         get = requests.get("https://mbasic.facebook.com/" + user, headers=headers).text
         parser = BeautifulSoup(get, "html.parser")
-        if parser.title.text in ["Page Not Found", "Content Not Found", "Redirecting..."]:
+        if parser.title.text in ["Page Not Found", "Content Not Found", "Redirecting...", "Log into Facebook."]:
             print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Unable to fetch user\033[0m")
             time.sleep(2)
             banner()
@@ -353,7 +353,7 @@ def username():
 
             else:
                 print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Gender: Can't Fetch.\033[0m")
-                age = int(input("\033[1;92m[\033[1;97m?\033[1;92m] Enter target age(default: 08)\033[1;91m: \033[0m"))
+                age = input("\033[1;92m[\033[1;97m?\033[1;92m] Enter target age(default: 08)\033[1;91m: \033[0m")
                 if age in ["", " "]:
                     age = "08"
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Generating wordlist...\033[0m")
