@@ -1,7 +1,9 @@
 # FBGen
 FBGen is simple facebook user based wordlist generator.
-##Under Maintainace
+
+#Under Maintainace
 Multiple bugs found
+
 ## Screenshot
 <img src="https://github.com/Mrp1r4t3/FBGen/blob/main/Screenshot/Screenshot0.jpg" width="80%" height="80%">
 
