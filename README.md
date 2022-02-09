@@ -2,17 +2,15 @@
 FBGen is simple facebook user based wordlist generator.
 
 ## Screenshots
-![Image](Screenshot/screenshot0.jpg)
-![Image](Screenshot/screenshot1.jpg)
-## Features
-1. Automatic python modules installation.
-2. Cookie authentication (basically used to extract simple infos on target)
+<img src="https://github.com/Mrp1r4t3/FBGen/blob/main/Screenshot/Screenshot0.jpg" width="50%" height="50%">
+<img src="https://github.com/Mrp1r4t3/FBGen/blob/main/Screenshot/Screenshot1.jpg" width="50%" height="50%">
 
 ## Termux Installation
 1. `pkg install git -y`
-2. `git clone https://github.com/Mrp1r4t3/FBGen.git`
-3. `cd FBGen`
-4. `python fbgen.py`
+2. `pkg install python -y`
+3. `git clone https://github.com/Mrp1r4t3/FBGen.git`
+4. `cd FBGen`
+5. `python fbgen.py`
 
 ## How to get FB cookie?
 Youtube Tutorial - Soon.
