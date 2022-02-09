@@ -1,6 +1,9 @@
 # FBGen
 FBGen is simple facebook user based wordlist generator.
 
+## Screenshots
+![Image](Screenshot/screenshot0.jpg)
+![Image](Screenshot/screenshot1.jpg)
 ## Features
 1. Automatic python modules installation.
 2. Cookie authentication (basically used to extract simple infos on target)
