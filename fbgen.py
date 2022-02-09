@@ -30,7 +30,7 @@ def banner():
 \033[1;91m[>] Coded by: \033[1;92m\033[04m\033[04mMr.P1r4t3\033[0m
 \033[1;91m[>] Github  : \033[1;92m\033[04mhttps://github.com/mrp1r4t3\033[0m
 \033[1;91m[>] Youtube : \033[1;92m\033[04mhttps://youtube.com/c/mrp1r4t3\033[0m
-\033[1;91m[>] FBGroup : \033[1;92m\033[04mhttps://facebook.com/groups/1778790372291663\033[0m\n"""
+\033[1;91m[>] FBGroup : \033[1;92m\033[04mhttps://fb.com/groups/1778790372291663\033[0m\n"""
 
     lq = ["Boot Up or Shut Up!", "Their crime is curiosity.", "You thought your secrets were safe. You were wrong.",
           "There is no right or wrong, only fun and boring.",
@@ -189,20 +189,18 @@ def username():
     else:
         get = requests.get("https://mbasic.facebook.com/" + user, headers=headers).text
         parser = BeautifulSoup(get, "html.parser")
-        if parser.title.text in ["Page Not Found", "Content Not Found"]:
-            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m User Not Found!\033[0m")
+        if parser.title.text in ["Page Not Found", "Content Not Found", "Redirecting..."]:
+            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Unable to fetch user\033[0m")
             time.sleep(2)
             banner()
             username()
         else:
-            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Name: \033[0m" + parser.title.text.replace(" | Facebook", "").split())
+            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Name: \033[0m" + str(parser.title.text.replace(" | Facebook", "")))
             bayotodili = parser.find_all(text=["Male", "Female"])
             gender = ' '.join([str(elem) for elem in bayotodili])
-            # moded
             if gender == "Male":
                 print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Gender: " + str(gender) + "\033[0m")
                 print()
-                # tabed
                 age = input("\033[1;92m[\033[1;97m?\033[1;92m] Enter target age(default: 08)\033[1;91m: \033[0m")
                 if age in ["", " "]:
                     age = "08"
