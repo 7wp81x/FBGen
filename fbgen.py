@@ -125,7 +125,7 @@ def check_coken():
     }
     check_cookie = requests.get("https://mbasic.facebook.com/AnonymousP1r4t3", headers=headersd).text
     chick_cookie = BeautifulSoup(check_cookie, "html.parser")
-    if chick_cookie.title.text in ["Log into Facebook | Facebook", "Facebook", "Redirecting..."]:
+    if chick_cookie.title.text in ["Log into Facebook | Facebook", "Redirecting..."]:
         print("\033[1;91m[\033[1;93m*\033[1;91m] Login failed!\033[0m")
         print()
         print("\033[1;91m[\033[1;97m*\033[1;91m] Cookie expired or invalid.\033[0m")
@@ -183,14 +183,19 @@ def username():
         'accept-language': 'en-US,en;q=0.9',
         'cookie': cok,
     }
-    user = input("\033[1;92m[\033[1;97m?\033[1;92m] Enter Target Username\033[1;91m: \033[0m")
+    user = input("\033[1;92m[\033[1;97m?\033[1;92m] Enter Target ID\033[1;91m: \033[0m")
     if user in ["", " "]:
         print("\033[1;91m[\033[1;97m!\033[1;91m] Please enter a valid username!\033[0m")
     else:
-        get = requests.get("https://mbasic.facebook.com/" + user, headers=headers).text
+        get = requests.get("https://mbasic.facebook.com/profile.php?id=" + user, headers=headers, allow_redirects=True).text
         parser = BeautifulSoup(get, "html.parser")
-        if parser.title.text in ["Page Not Found", "Content Not Found", "Redirecting...", "Log into Facebook."]:
+        if parser.title.text in ["Page Not Found", "Content Not Found", "Log into Facebook."]:
             print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Unable to fetch user\033[0m")
+            time.sleep(2)
+            banner()
+            username()
+        elif parser.title.text in ["Redirecting...","redirecting..."]:
+            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Please Enter User ID\033[0m")
             time.sleep(2)
             banner()
             username()
