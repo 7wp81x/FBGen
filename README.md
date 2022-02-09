@@ -11,7 +11,7 @@ FBGen is simple facebook user based wordlist generator.
 3. `cd FBGen`
 4. `python fbgen.py`
 
-## How to get Cookie?
+## How to get FB cookie?
 Youtube Tutorial - Soon.
 
 ## YouTube
