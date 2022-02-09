@@ -4,7 +4,7 @@ FBGen is simple facebook user based wordlist generator.
 ## Screenshot
 <img src="https://github.com/Mrp1r4t3/FBGen/blob/main/Screenshot/Screenshot0.jpg" width="80%" height="80%">
 
-##Under Maintainace
+## Under Maintainace
 Multiple bugs found
 
 ## Termux Installation
