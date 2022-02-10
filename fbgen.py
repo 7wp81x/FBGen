@@ -401,7 +401,7 @@ def username():
 
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Generating wordlist...\033[0m")
                     time.sleep(2)
-                    print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding female wordlist...\033[0m")
+                    print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding common wordlist...\033[0m")
                     time.sleep(3)
                     first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
                     with open(first + ".txt", 'w') as f:
