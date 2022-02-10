@@ -215,7 +215,7 @@ def username():
                     time.sleep(3)
                     first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
                     with open(first + ".txt", 'w') as f:
-                        tarname = parser.title.text.replace(" | Facebook", "").split()
+                        tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
                         li = list(tarname.split(" "))
                         taeko = ["gwapoko", "pogi", "pogiako", "pogiko"]
@@ -253,7 +253,7 @@ def username():
                     time.sleep(3)
                     first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
                     with open(first + ".txt", 'w') as f:
-                        tarname = parser.title.text.replace(" | Facebook", "").split()
+                        tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
                         li = list(tarname.split(" "))
                         taeko = ["gwapoko", "pogi", "pogiako", "pogiko"]
@@ -291,7 +291,7 @@ def username():
                     time.sleep(2)
                     first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
                     with open(first + ".txt", 'w') as f:
-                        tarname = parser.title.text.replace(" | Facebook", "").split()
+                        tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
                         li = list(tarname.split(" "))
                         taeko = ["gandako", "ganda", "magandaako", "magandako", "qwerty"]
@@ -330,7 +330,7 @@ def username():
                     time.sleep(2)
                     first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
                     with open(first + ".txt", 'w') as f:
-                        tarname = parser.title.text.replace(" | Facebook", "").split()
+                        tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
                         li = list(tarname.split(" "))
                         taeko = ["gandako", "ganda", "magandaako", "magandako", "qwerty"]
@@ -367,7 +367,7 @@ def username():
                     time.sleep(3)
                     first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
                     with open(first + ".txt", 'w') as f:
-                        tarname = parser.title.text.replace(" | Facebook", "").split()
+                        tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
                         li = list(tarname.split(" "))
                         taeko = ["gandako", "pogiko", "gwapoko", "magandako", "qwerty"]
@@ -405,7 +405,7 @@ def username():
                     time.sleep(3)
                     first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
                     with open(first + ".txt", 'w') as f:
-                        tarname = parser.title.text.replace(" | Facebook", "").split()
+                        tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
                         li = list(tarname.split(" "))
                         taeko = ["gandako", "pogiko", "gwapoko", "magandako", "qwerty"]
