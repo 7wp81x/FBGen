@@ -432,6 +432,7 @@ check_token = os.path.exists('cookie.txt')
 if check_token == False:
     try:
         updates()
+        check_coken()
     except requests.exceptions.ConnectionError:
         print("\033[1;91m[\033[1;97m!\033[1;91m] Connection Error!\033[0m")
         exit()
