@@ -19,7 +19,7 @@ Support custom wordlist
 5. `python fbgen.py`
 
 ## How to get FB cookie?
-Youtube Tutorial - Soon.
+[Youtube Tutorial](https://www.youtube.com/watch?v=L_WGpYxge14)
 
 ## YouTube
 [MrP1r4t3](https://www.youtube.com/c/mrp1r4t3)
