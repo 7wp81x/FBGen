@@ -146,21 +146,17 @@ def check_coken():
 
 def updates():
     if os.path.exists("Module/version.txt") == True:
-        try:
-            check_ver = requests.get("https://raw.githubusercontent.com/Mrp1r4t3/FBGen/main/Modules/version.txt")
-            if check_ver == "v1.2":
-                pass
-            elif check_ver.status_code == 404:
-                print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Can't check for updates... Tool is on maintainace.\033[0m")
-                pass
-            else:
-                print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Checking for updates...")
-                print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Version "+str(check_ver)+"is now available\033[0m")
-                print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Updating...\033[0m")
-                os.system('git pull')
-        except requests.exceptions.ConnectionError:
-            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Connection Error!")
-            exit()
+        check_ver = requests.get("https://raw.githubusercontent.com/Mrp1r4t3/FBGen/main/Modules/version.txt").text
+        if check_ver == "v1.2":
+            pass
+        elif check_ver.status_code == 404:
+            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Can't check for updates... Tool is on maintainace.\033[0m")
+            pass
+        else:
+            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Checking for updates...")
+            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Version "+str(check_ver)+"is now available\033[0m")
+            print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Updating...\033[0m")
+            os.system('git pull')
     else:
         os.system("git pull")
 
@@ -435,12 +431,13 @@ def username():
 check_token = os.path.exists('cookie.txt')
 if check_token == False:
     try:
-        login()
+        updates()
     except requests.exceptions.ConnectionError:
         print("\033[1;91m[\033[1;97m!\033[1;91m] Connection Error!\033[0m")
         exit()
 else:
     try:
+        updates()
         check_coken()
     except requests.exceptions.ConnectionError:
         print("\033[1;91m[\033[1;97m!\033[1;91m] Connection Error!\033[0m")
