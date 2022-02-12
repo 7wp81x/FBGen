@@ -158,7 +158,7 @@ def updates():
             print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Updating...\033[0m")
             os.system('git pull')
     else:
-        os.system("git pull")
+        pass
 
 
 def username():
