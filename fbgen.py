@@ -2,6 +2,7 @@
 # This is only used for educational purposes only.
 # Date: 01/27/22
 # Changing infos and banner does'nt make you a programmer...
+
 import time
 import os
 import random
@@ -29,7 +30,6 @@ def banner():
     infos = """
 \033[1;91m[>] Coded by: \033[1;92m\033[04m\033[04mMr.P1r4t3\033[0m
 \033[1;91m[>] Github  : \033[1;92m\033[04mhttps://github.com/mrp1r4t3\033[0m
-\033[1;91m[>] Youtube : \033[1;92m\033[04mhttps://youtube.com/c/mrp1r4t3\033[0m
 \033[1;91m[>] FBGroup : \033[1;92m\033[04mhttps://fb.com/groups/1778790372291663\033[0m\n"""
 
     lq = ["Boot Up or Shut Up!", "Their crime is curiosity.", "You thought your secrets were safe. You were wrong.",
@@ -209,7 +209,7 @@ def username():
                     time.sleep(2)
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding male wordlist...\033[0m")
                     time.sleep(3)
-                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
+                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split().lower()
                     with open(first + ".txt", 'w') as f:
                         tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
@@ -247,7 +247,7 @@ def username():
                     time.sleep(2)
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding male wordlist...\033[0m")
                     time.sleep(3)
-                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
+                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split().lower()
                     with open(first + ".txt", 'w') as f:
                         tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
@@ -285,7 +285,7 @@ def username():
                     time.sleep(2)
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding female wordlist...\033[0m")
                     time.sleep(2)
-                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
+                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split().lower()
                     with open(first + ".txt", 'w') as f:
                         tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
@@ -324,7 +324,7 @@ def username():
                     time.sleep(2)
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding female wordlist...\033[0m")
                     time.sleep(2)
-                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
+                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split().lower()
                     with open(first + ".txt", 'w') as f:
                         tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
@@ -361,7 +361,7 @@ def username():
                     time.sleep(2)
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding common wordlist...\033[0m")
                     time.sleep(3)
-                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
+                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split().lower()
                     with open(first + ".txt", 'w') as f:
                         tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
@@ -399,7 +399,7 @@ def username():
                     time.sleep(2)
                     print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Adding common wordlist...\033[0m")
                     time.sleep(3)
-                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split()
+                    first, *middle, last = parser.title.text.replace(" | Facebook", "").split().lower()
                     with open(first + ".txt", 'w') as f:
                         tarname = parser.title.text.replace(" | Facebook", "")
                         fullname = tarname.replace(" ", "").lower()
@@ -443,3 +443,4 @@ else:
     except requests.exceptions.ConnectionError:
         print("\033[1;91m[\033[1;97m!\033[1;91m] Connection Error!\033[0m")
         exit()
+
