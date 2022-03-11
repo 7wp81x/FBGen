@@ -21,7 +21,5 @@ Support custom wordlist
 ## How to get FB cookie?
 [Youtube Tutorial](https://www.youtube.com/watch?v=L_WGpYxge14)
 
-## YouTube
-[MrP1r4t3](https://www.youtube.com/c/mrp1r4t3)
 ## Facebook Group
 [Android Hacker PH](https://www.facebook.com/groups/1778790372291663/)
